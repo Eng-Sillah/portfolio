@@ -91,6 +91,10 @@
 
     /* Add media query for smaller screens */
     @media (max-width: 768px) {
+      .contact-form {
+        max-width: 90%;
+        margin: 0 auto;
+      }
         .contact-form  .nameEmail {
             flex-direction: column;
           }

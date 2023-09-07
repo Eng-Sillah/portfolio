@@ -42,7 +42,7 @@ function Projects() {
       tags: 'web development | web design',
       alt: 'Guess Image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-      demoLink: 'https://example.com/pig-game-demo',
+      demoLink: 'https://app.netlify.com/sites/guess-my-number-by-sillah/configuration/domain',
       githubLink: 'https://github.com/yourusername/pig-game',
       // Add more project details
     },

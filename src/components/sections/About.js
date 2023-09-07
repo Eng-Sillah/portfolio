@@ -10,27 +10,27 @@ function About() {
           <div className="experience">
             <h3>Experience</h3>
             <div className="experience-item">
-              <h4>Sierra Coding academy</h4>
-              <p>Freetown, Sierra Leone </p>
-              <p>June 2021 - Continue </p>
-              <p>Co-Founder of Sierra Coding Academy </p>
-              <p>Co-founder of Sierra Coding Academy, an innovative online coding learning platform base in sierra leone. Contributed to the conceptualization, development, and launch of the platform. Collaborated with the team to design curriculum, create engaging learning materials, and establish a user-friendly online experience. Played a pivotal role in shaping the company's vision and mission to empower individuals with essential coding skills.</p>
+              <h4 className='experience-title'>Sierra Coding academy</h4>
+              <p className='experience-place'>Freetown, Sierra Leone </p>
+              <p className='experience-time'>June 2021 - Continue </p>
+              <p className='experience-position'>Co-Founder of Sierra Coding Academy </p>
+              <p className='experience-description'>Sierra Coding Academy is an innovative online coding learning platform base in sierra leone. Contributed to the conceptualization, development, and launch of the platform. Collaborated with the team to design curriculum, create engaging learning materials, and establish a user-friendly online experience. Played a pivotal role in shaping the company's vision and mission to empower individuals with essential coding skills.</p>
             </div>
 
             <div className="experience-item">
-              <h4>BaTach Priority One Company Ltd</h4>
-              <p>Freetown, Sierra Leone </p>
-              <p>June 2021 - May 2023 </p>
-              <p>Senior IT Manager </p>
-              <p>Led IT operations for a financial institution, overseeing strategic technology planning, infrastructure management, and regulatory compliance. Managed cross-functional teams, executed critical projects, and ensured secure, efficient, and innovative IT solutions to drive operational excellence and enhance customer experiences.</p>
+              <h4 className='experience-title'>BaTach Priority One Company Ltd</h4>
+              <p className='experience-place'>Freetown, Sierra Leone </p>
+              <p className='experience-time'>June 2021 - May 2023 </p>
+              <p className='experience-position'>Senior IT Manager </p>
+              <p className='experience-description'>Led IT operations for a financial institution, overseeing strategic technology planning, infrastructure management, and regulatory compliance. Managed cross-functional teams, executed critical projects, and ensured secure, efficient, and innovative IT solutions to drive operational excellence and enhance customer experiences.</p>
             </div>
             
             <div className="experience-item">
-              <h4>B.BLACK ENTERPRISE</h4>
-              <p>Freetown, Sierra Leone</p>
-              <p>June 2021 - May 2023 </p>
-              <p>Sales Manager </p>
-              <p>Full stack web and mobile development on Klarna's main shopping app infrastructure using React, React Native, and Node.js.</p>
+              <h4 className='experience-title'>B.BLACK ENTERPRISE</h4>
+              <p className='experience-place'>Freetown, Sierra Leone</p>
+              <p className='experience-time'>June 2021 - May 2023 </p>
+              <p className='experience-position'>Sales Manager </p>
+              <p className='experience-description'>Full stack web and mobile development on Klarna's main shopping app infrastructure using React, React Native, and Node.js.</p>
             </div>
             {/* Add more experience items */}
           </div>

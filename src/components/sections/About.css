@@ -35,6 +35,7 @@
     width: 48%;
     position: relative;
     padding-left: 30px; /* Adjust this value as needed */
+    text-align: justify;
   }
   
   .experience h3,
@@ -113,6 +114,15 @@
     background-color: #007bff; /* Set line color to match circle color */
   }
   
+  .experience-place {
+    font-weight: bolder;
+  }
+  .experience-time {
+    font-weight: bold;
+  }
+  .experience-position {
+    font-weight: bold;
+  }
   /* Add media query for smaller screens */
   @media (max-width: 768px) {
     .about-grid {
