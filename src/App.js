@@ -7,11 +7,14 @@ import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import About from './components/sections/About';
 import Contact from './components/sections/Contact';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+       <Router>
       <Header />
 
       {/* Home Section */}
@@ -43,20 +46,6 @@ function App() {
         </div>
       </section>
 
-      {/* Resume Section */}
-      {/* <section id="resume">
-        <div className="content">
-        <Resume />
-        </div>
-      </section> */}
-
-      {/* Blog Section
-      <section id="blog">
-        <div className="content">
-        <Blog />
-        </div>
-      </section> */}
-
       {/* Contact Section */}
       <section id="contact">
         <div className="content">
@@ -65,9 +54,14 @@ function App() {
       </section>
 
       {/* Footer */}
+   
+
+    
       <footer>
         <p>&copy; 2023 Sorie Bonkay Sillah </p>
       </footer>
+
+      </Router>
     </div>
   );
 }

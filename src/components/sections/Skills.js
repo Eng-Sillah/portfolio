@@ -5,6 +5,7 @@ function Skills() {
   const skillsSectionRef = useRef(null);
 
   useEffect(() => {
+    const skillsSectionRef = document.getElementById('skills');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

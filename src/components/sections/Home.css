@@ -1,4 +1,66 @@
 /* src/components/Home.css */
+/* Existing styles */
+
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes letterFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out infinite;
+}
+
+.letterFadeIn {
+  opacity: 0;
+  animation: letterFadeIn 0.5s ease-in-out forwards; /* Play animation once and keep final state */
+  animation-delay: calc(0.1s * var(--index)); /* Delay animation for each letter */
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: #007bff;
+  }
+  25% {
+    color: #00ff00;
+  }
+  50% {
+    color: #ff0000;
+  }
+  75% {
+    color: #ffff00;
+  }
+}
+
+/* working*/
+
+
 .home-section {
     width: 100%;
     height: 100vh;
@@ -11,6 +73,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
+    animation: fadeInUp 1s ease-in-out;
   }
   
   .bg-overlay {
@@ -30,14 +93,14 @@
     /* flex-direction: row; */
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding: 3rem;
   }
   
   .centered-div div {
     margin: 20px 70px;
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
   }
   
   
@@ -56,9 +119,12 @@
   }
   
   .right-column {
+    width: 50%;
     flex: 2;
     /* padding: 2rem; */
     color: white;
+    height: 300px;
+
   }
   
   .right-column h1 {
@@ -69,6 +135,7 @@
   .right-column p {
     font-size: 1rem; /* Adjust font size for smaller screens */
     margin-bottom: 2rem;
+    text-align: left;
   }
   
   .cta-button {
@@ -86,6 +153,104 @@
     background-color: #0056b3;
   }
   
+  .right-column h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block; /* Ensure inline-block to animate each letter separately */
+  }
+
+
+  .blinking-line {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(99, 178, 255);
+    margin-top: 10px;
+    animation: blink 0.7s linear infinite;
+  }
+  
+  /* Add blinking underline styles */
+  .color-changing {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .color-changing:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 8px;
+    background-color: rgb(99, 178, 255);
+    animation: load 6s linear infinite; /* Use loading animation only */
+  }
+  
+  /* Loading animation */
+  @keyframes load {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .right-column .intro-title {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  .right-column .intro-title h1 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .right-column .intro-title h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .right-column .subtitle {
+    text-align: left;
+  }
+
+  .right-column button {
+    background-color: rgb(99, 178, 255);
+    font-weight: 600;
+    padding: 10px 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+
+
+  @keyframes loading {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .load {
+    animation: loading 4s linear forwards;
+    background: linear-gradient(to right, rgba(99, 178, 255, 0.5), rgba(99, 178, 255, 1));
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: 4px;
+    width: 0;
+  }
+
   /* Add a media query for screens smaller than 768px */
   @media (max-width: 768px) {
     .centered-div {
@@ -111,12 +276,31 @@
       width: 60%; /* Adjust image width for smaller screens */
     }
   
+    .right-column {
+      align-items: center;
+    }
     .right-column h1 {
       font-size: 1.5rem; /* Adjust font size for smaller screens */
     }
   
+    .right-column .intro-title {
+      text-align: center;
+    }
+    .right-column .intro-title h3 {
+      margin-top: 10px;
+    }
     .right-column p {
       font-size: 0.9rem; /* Adjust font size for smaller screens */
     }
+    .right-column .subtitle {
+      text-align: center;
+    }
+
+ 
   }
   
+
+  .cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
